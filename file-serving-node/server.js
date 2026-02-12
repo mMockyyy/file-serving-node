@@ -4,7 +4,8 @@ const path = require('path');
 const mime = require('mime-types');
 
 const PUBLIC_DIR = path.join(__dirname, 'public');
-const UPLOAD_DIR = path.join(__dirname, 'uploads');
+const DEFAULT_UPLOAD_DIR = process.env.RENDER ? path.join('/tmp', 'uploads') : path.join(__dirname, 'uploads');
+const UPLOAD_DIR = process.env.UPLOAD_DIR || DEFAULT_UPLOAD_DIR;
 const MAX_UPLOAD_BYTES = 10 * 1024 * 1024; // 10 MB
 const ALLOWED_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg', '.gif', '.pdf', '.txt']);
 
