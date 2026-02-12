@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: file-serving-node
+    env: node
+    rootDir: file-serving-node
+    plan: free
+    buildCommand: npm ci || npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 18
