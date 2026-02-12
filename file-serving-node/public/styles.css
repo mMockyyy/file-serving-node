@@ -2,8 +2,10 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     background: linear-gradient(135deg, #fdfdfd, #7ea5ea);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,4 +17,59 @@ h1 {
     padding: 20px 40px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+label {
+    display: block;
+    color: #0f1c3f;
+    font-weight: 600;
+}
+
+input[type="file"] {
+    display: block;
+    width: min(320px, 80vw);
+    color: #0f1c3f;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(15, 28, 63, 0.25);
+    border-radius: 10px;
+    padding: 6px 8px;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    margin-right: 10px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #8fb0ee;
+    color: #0f1c3f;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #8fb0ee;
+    color: #0f1c3f;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(126, 165, 234, 0.35);
 }

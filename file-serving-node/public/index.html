@@ -8,5 +8,10 @@
     </head>
     <body>
         <h1>Welcome to the Node.js File Server</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Upload a file (png, jpg, gif, pdf, txt)</label>
+            <input id="file" name="file" type="file" accept=".png,.jpg,.jpeg,.gif,.pdf,.txt" required>
+            <button type="submit">Upload</button>
+        </form>
     </body>
 </html>
